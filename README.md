@@ -20,18 +20,27 @@ use the terminal for the following steps
 2. Install h.264 codec
 
 	git clone --depth 1 git://git.videolan.org/x264
+
 	cd x264
+
 	./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
+
 	make -j2
+
 	sudo make install
 
 3. Install ffmpeg
 
 	cd /usr/src
+
 	sudo git clone https://github.com/FFmpeg/FFmpeg.git
+
 	cd FFmpeg
+
 	sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
+
 	make
+	
 	sudo make install
 
 4. 
