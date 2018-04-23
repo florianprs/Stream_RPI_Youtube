@@ -17,7 +17,7 @@ use the terminal for the following steps
 	sudo apt-get update
 	Sudo apt-get upgrade
 
-2. Install h.264 codec
+2. Install h.264 codec :
 
 	git clone --depth 1 git://git.videolan.org/x264
 
@@ -29,7 +29,7 @@ use the terminal for the following steps
 
 	sudo make install
 
-3. Install ffmpeg
+3. Install ffmpeg :
 
 	cd /usr/src
 
@@ -40,7 +40,7 @@ use the terminal for the following steps
 	sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
 
 	make
-	
+
 	sudo make install
 
 4. 
