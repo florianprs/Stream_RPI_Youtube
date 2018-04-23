@@ -17,7 +17,7 @@ use the terminal for the following steps
 	sudo apt-get update
 	Sudo apt-get upgrade
 
-2. Install h.264 codec :
+2. Install h.264 codec
 
 	git clone --depth 1 git://git.videolan.org/x264
 	cd x264
@@ -25,7 +25,7 @@ use the terminal for the following steps
 	make -j2
 	sudo make install
 
-3. Install ffmpeg : 
+3. Install ffmpeg
 
 	cd /usr/src
 	sudo git clone https://github.com/FFmpeg/FFmpeg.git
@@ -35,6 +35,7 @@ use the terminal for the following steps
 	sudo make install
 
 4. 
+
 	nano stream2youtube.sh
 
 modifie the folowing command to insert your youtube key 
@@ -47,5 +48,7 @@ save and exit
 	
 	ctrl+x
 
-5. now you can stream with bash stream2youtube.sh
+5. now you can stream
+
+	bash stream2youtube.sh
 
