@@ -1,24 +1,24 @@
 # Stream-RPI-to-Youtube
 
-When you buy a Raspberry Pi, you are looking probably for a nice project to practice with Python or to try the possibility of your device. The project I propose you is a interesting project to control your Pi, a camera (here a USB camera) and a web interface (here a channel YouTube) in a same work. 
+When you buy a Raspberry Pi, you are looking probably for a nice project to practice with Python or to try the possibility of your device. The project I propose you is an interesting project to control your Pi, a camera (here a USB camera) and a web interface (here a channel YouTube) in a same work. 
 The goal of this tutorial is to use a USB camera connected to a raspberry pi 2 & 3 and live stream this video on an Youtube channel.
 
 ## What you will need 
 
 You will need the following: 
 
-- Raspberry pi 2 or 3 with the last version of Raspbian
+- Raspberry pi 2 or 3 with the lastest version of Raspbian
 - an USB camera
 - an internet connection
 - an YouTube account 
 
-We will also use the ffmpeg library. So if this library is corrected installed on you Raspberry Pi, skip the point 3 ofthe tutorial about ffmpeg installation. 
+We will also use the ffmpeg library. So if this library is corrected installed on you Raspberry Pi, skip the point 3 of the tutorial about ffmpeg installation. 
 
 ### 1. Update your Raspberry Pi
 
 To install the ffmpeg library, it is important to have a recent version of Raspbian. 
 
-Open a terminal and insert this lines : 
+Open a terminal and insert these lines : 
 
 ```
 
@@ -37,8 +37,8 @@ sudo apt-get update
 
 ### 2. Get the key of your YouTube channel 
 
-To stream on your own YouTube channel, you need to get your "Stream key". It is a key that is working only on you YouTube channel and give you the right to stream on this. 
-So, connect you to you YouTube channel. 
+To stream on your own YouTube channel, you need to get your "Stream key". It is a key that is working only on your YouTube channel and gives you the right to stream on this. 
+So, connect you to your YouTube channel. 
 Then, go to creator studio. 
 Next, go to live streaming. 
 Now, go above the page and keep the "Stream name/key"
@@ -50,7 +50,7 @@ It is really simple. Plug your USB camera on the left top Raspberry Pi USB conne
 
 ### 4. Install ffmpeg
 
-Now, when you are finished to update your Raspberry Pi, it is time to install the ffmpeg library. As I said above, you have not to do this part if you already have a ffmpeg library correctly installed on your Raspberry Pi. 
+Now, when you are finished updating your Raspberry Pi, it is time to install the ffmpeg library. As I said above, you have not to do this part if you already have a ffmpeg library correctly installed on your Raspberry Pi. 
 
 #### 1. Create an empty file to hold the script code:
 
@@ -62,7 +62,7 @@ sudo nano ffmpeg-install.sh
 
 ```
 
-#### 2. Cut and Paste the script code into the file.
+#### 2. Cut and paste the script code into the file.
 
 ```
 
@@ -180,7 +180,7 @@ echo "FFmpeg and Codec Installation Complete"
 
   Ctrl + X, then y
 
-#### 4. Mark the script file as Executable:
+#### 4. Mark the script file as executable:
 
 ```
 
@@ -195,11 +195,11 @@ sudo ./ffmpeg-install.sh
 
 ```
 
-The script completes in approximately 1 hour on a Raspberry Pi 3. So, don't hesitate to make a break and why not watch an episode on Netflix ! ;-) 
+The script completes in approximately 1 hour on a Raspberry Pi 3. So, don't hesitate to make a break and why not watch an episode on Netflix! ;-) 
 
 ### 5. Set the parameter of the stream
 
-After it is finished, you can know make a test to see if the ffmpeg is correcty installed. 
+After it is finished, you can now make a test to see if the ffmpeg is correctly installed. 
 
 ```
 ffmpeg
@@ -220,18 +220,18 @@ ffmpeg -thread_queue_size 512 -f v4l2 -i /dev/video0 -f s16le -i /dev/zero -stri
 
 ```
 
-You can find the specifications of each terms to this link : ` http://www.ffmpeg.org/ffmpeg.html `
+You can find the specifications of each term to this link : ` http://www.ffmpeg.org/ffmpeg.html `
 
 After that, save and exit 
 	
 	ctrl+x
 
 
-Now, you will start a command to stream directry on your YouTube channel. 
+Now, you can start the command to stream directly to your YouTube channel. 
 
 	bash stream2youtube.sh
 
 
 ### 6. Check your stream on YouTube
  
- Return on your YouTube channel (like before : connect you to you YouTube channel. Then, go to creator studio. Next, go to live streaming. ). And, you will have normally your live streaming on your YouTube channel. Congratulation ! 
+ Return on your YouTube channel (like before : connect you to your YouTube channel. Then, go to creator studio. Next, go to live streaming. ). And, you will have normally your live streaming on your YouTube channel. Congratulation! 
