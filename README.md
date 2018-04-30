@@ -16,17 +16,18 @@ We will also use the ffmpeg library. So if this library is corrected installed o
 
 ### 1. Update your Raspberry Pi
 
-To insall the ffmpeg library, it is important to have a recent version of Raspbian. 
+To install the ffmpeg library, it is important to have a recent version of Raspbian. 
 
 Open a terminal and insert this lines : 
 
 ```
 
 sudo apt-get update 
+
 sudo apt-get upgrade
 
 ```
-Generally, the second line takes a lot of time of processing. So you can go directly to the point 2 during this time. But when this command is finished, do this line before to continue to point 3. 
+Generally, the second line takes a lot of time of processing. So you can go directly to the point 2 during this time. But when this command is finished, do this line before to continue to point 4. 
 
 ```
 
@@ -43,7 +44,11 @@ Next, go to live streaming.
 Now, go above the page and keep the "Stream name/key"
 Reveal your Stream key and keep this information for later. 
 
-### 3. Install ffmpeg
+### 3. Install camera
+
+It is really simple. Plug your USB camera on the left top Raspberry Pi USB connector.
+
+### 4. Install ffmpeg
 
 Now, when you are finished to update your Raspberry Pi, it is time to install the ffmpeg library. As I said above, you have not to do this part if you already have a ffmpeg library correctly installed on your Raspberry Pi. 
 
@@ -183,29 +188,50 @@ sudo chmod +x ffmpeg-install.sh
 
 ```
 
-#### 5. Run the script with super-user privileges using the sudo command:
+#### 5. Run the script:
 
+```
 sudo ./ffmpeg-install.sh
+
+```
 
 The script completes in approximately 1 hour on a Raspberry Pi 3. So, don't hesitate to make a break and why not watch an episode on Netflix ! ;-) 
 
-### 4. Set the parameter of the stream
-### 5. Check your stream on YouTube
- 
+### 5. Set the parameter of the stream
+
+After it is finished, you can know make a test to see if the ffmpeg is correcty installed. 
+
+```
+ffmpeg
+
+```
+
+Then, if you receive the information about ffmpeg, you can continue. 
+
+Create a file to insert the command
 
 	nano stream2youtube.sh
 
-modifie the folowing command to insert your youtube key 
 
-	ffmpeg -thread_queue_size 512 -f v4l2 -i /dev/video0 -f s16le -i /dev/zero -strict experimental -vcodec h264 -preset veryfast -crf 25 -pix_fmt yuv420p -g 60 -vb 820k -maxrate 820k -bufsize 820k -profile:v baseline -r 30 -f flv "rtmp://a.rtmp.youtube.com/live2/"insert_your_youtbe_key""
+Then, copy past this command on this file (Don't forget to change your YouTube key in the code) : 
 
-to find your youtube key you need to go to your Youtube account > Creator studio> Diffusion en Direct (stream or live) you will found on the botom of this page the name or the key of the flux
+```
+ffmpeg -thread_queue_size 512 -f v4l2 -i /dev/video0 -f s16le -i /dev/zero -strict experimental -vcodec h264 -preset veryfast -crf 25 -pix_fmt yuv420p -g 60 -vb 820k -maxrate 820k -bufsize 820k -profile:v baseline -r 30 -f flv "rtmp://a.rtmp.youtube.com/live2/"insert_your_youtbe_key""
 
-save and exit 
+```
+
+You can find the specifications of each terms to this link : ` http://www.ffmpeg.org/ffmpeg.html `
+
+After that, save and exit 
 	
 	ctrl+x
 
-5. now you can stream
+
+Now, you will start a command to stream directry on your YouTube channel. 
 
 	bash stream2youtube.sh
 
+
+### 6. Check your stream on YouTube
+ 
+ Return on your YouTube channel (like before : connect you to you YouTube channel. Then, go to creator studio. Next, go to live streaming. ). And, you will 
