@@ -234,4 +234,4 @@ Now, you will start a command to stream directry on your YouTube channel.
 
 ### 6. Check your stream on YouTube
  
- Return on your YouTube channel (like before : connect you to you YouTube channel. Then, go to creator studio. Next, go to live streaming. ). And, you will 
+ Return on your YouTube channel (like before : connect you to you YouTube channel. Then, go to creator studio. Next, go to live streaming. ). And, you will have normally your live streaming on your YouTube channel. Congratulation ! 
