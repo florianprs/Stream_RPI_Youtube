@@ -47,7 +47,7 @@ Reveal your Stream key and keep this information for later.
 
 Now, when you are finished to update your Raspberry Pi, it is time to install the ffmpeg library. As I said above, you have not to do this part if you already have a ffmpeg library correctly installed on your Raspberry Pi. 
 
-1. Create an empty file to hold the script code:
+#### 1. Create an empty file to hold the script code:
 
 ```
 
@@ -57,7 +57,7 @@ sudo nano ffmpeg-install.sh
 
 ```
 
-2. Cut and Paste the script code into the file.
+#### 2. Cut and Paste the script code into the file.
 
 ```
 
