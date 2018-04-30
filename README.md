@@ -171,11 +171,11 @@ echo "FFmpeg and Codec Installation Complete"
 
 ```
 
-3. Save the result:
+#### 3. Save the result:
 
-Ctrl + X, then y
+  Ctrl + X, then y
 
-4. Mark the script file as Executable:
+#### 4. Mark the script file as Executable:
 
 ```
 
@@ -183,7 +183,7 @@ sudo chmod +x ffmpeg-install.sh
 
 ```
 
-5. Run the script with super-user privileges using the sudo command:
+#### 5. Run the script with super-user privileges using the sudo command:
 
 sudo ./ffmpeg-install.sh
 
