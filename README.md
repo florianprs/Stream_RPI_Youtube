@@ -20,19 +20,19 @@ To insall the ffmpeg library, it is important to have a recent version of Raspbi
 
 Open a terminal and insert this lines : 
 
-'''
+```
 
 sudo apt-get update 
 sudo apt-get upgrade
 
-'''  
+```
 Generally, the second line takes a lot of time of processing. So you can go directly to the point 2 during this time. But when this command is finished, do this line before to continue to point 3. 
 
-'''
+```
 
 sudo apt-get update
 
-'''
+```
 
 ### 2. Get the key of your YouTube channel 
 
@@ -49,17 +49,17 @@ Now, when you are finished to update your Raspberry Pi, it is time to install th
 
 1. Create an empty file to hold the script code:
 
-'''
+```
 
 mkdir /home/pi/tools
 cd /home/pi/tools
 sudo nano ffmpeg-install.sh
 
-'''
+```
 
 2. Cut and Paste the script code into the file.
 
-'''
+```
 
 #!/bin/bash
 # Compile and install (or install via Apt) FFmpeg Codecs
@@ -169,7 +169,7 @@ ldconfig
 
 echo "FFmpeg and Codec Installation Complete"
 
-'''
+```
 
 3. Save the result:
 
@@ -177,11 +177,11 @@ Ctrl + X, then y
 
 4. Mark the script file as Executable:
 
-'''
+```
 
 sudo chmod +x ffmpeg-install.sh
 
-'''
+```
 
 5. Run the script with super-user privileges using the sudo command:
 
