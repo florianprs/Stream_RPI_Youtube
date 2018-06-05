@@ -2,6 +2,7 @@
 
 When you buy a Raspberry Pi, you are looking probably for a nice project to practice with Python or to try the possibility of your device. The project I propose you is an interesting project to control your Pi, a camera (here a USB camera) and a web interface (here a channel YouTube) in a same work. 
 The goal of this tutorial is to use a USB camera connected to a raspberry pi 2 & 3 and live stream this video on an Youtube channel.
+You can find a video of the demonstration with this link : https://youtu.be/l9Hk3dre_84 
 
 ## What you will need 
 
